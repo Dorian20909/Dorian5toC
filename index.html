@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre opciones de jugos verdes y bebidas 100% naturales y saludables en Arequipa. Únete al cambio sostenible.">
+    <title>Jugos Verdes | Arequipa Saludable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         MENÚ DE NAVEGACIÓN
+         ========================================== -->
+    <header id="inicio">
+        <nav class="navbar" aria-label="Navegación principal">
+            <div class="logo">
+                <span class="logo-icon" aria-hidden="true">🌱</span>
+                <span class="logo-text">JugosVerdes<strong>AQP</strong></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proposito">Nuestra razón</a></li>
+                <li><a href="#emprendimientos">Bebidas</a></li>
+                <li><a href="#galeria">Beneficios</a></li>
+                <li><a href="#contacto" class="btn-nav">Sugiere :)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- ==========================================
+     SECCIÓN HERO (FULLSCREEN BACKGROUND)
+     ========================================== -->
+    <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="badge-tag">🌿 Promoviendo el consumo saludable</span>
+        <h1>Alimentación continua con más frutas y verduras</h1>
+        <p>Observa nuestras propuestas de jugos totalmente frutales y 100% saludables que puedes preparar hoy mismo en tu hogar.</p>
+        <div class="hero-buttons">
+            <a href="#emprendimientos" class="btn btn-primary">Explorar Recetas</a>
+            <a href="#contacto" class="btn btn-secondary">Enviar Sugerencia</a>
+        </div>
+    </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN PROPÓSITO / PAUTAS
+         ========================================== -->
+    <section id="proposito" class="purpose-section">
+        <div class="section-header">
+            <h2>¿Por qué optar por integrar estas bebidas a tu alimentación?</h2>
+            <p>Está demostrado que el consumo regular de frutas y verduras reduce riesgos en la salud, pero es importante tomar en cuenta estas pautas:</p>
+        </div>
+        
+        <div class="flow-diagram-container">
+            <div class="flow-step">
+                <div class="step-number">01</div>
+                <h3>No son milagrosas</h3>
+                <p>Estas bebidas complementan tu nutrición diaria, pero no reemplazan tratamientos médicos ni diagnósticos profesionales.</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">➔</div>
+            <div class="flow-step">
+                <div class="step-number">02</div>
+                <h3>Nutrición Estable</h3>
+                <p>Al prepararse con ingredientes 100% naturales, poseen menos preservantes y azúcares añadidos que las opciones industriales.</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">➔</div>
+            <div class="flow-step">
+                <div class="step-number">03</div>
+                <h3>Impacto Positivo</h3>
+                <p>Si buscas un estilo de vida más activo o reducir el consumo de azúcar, estas bebidas serán excelentes aliadas en tu rutina diaria.</p>
+                <div class="step-img-box">
+                    <img src="3.jfif" alt="Bebida saludable" class="step-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN DE BEBIDAS PROPUESTAS
+         ========================================== -->
+    <section id="emprendimientos" class="cards-section">
+    <div class="section-header">
+        <h2>Bebidas Propuestas</h2>
+        <p><em>"Jugos saludables para una vida activa y llena de energía"</em></p>
+
+        <!-- BOTONES DE FILTRO -->
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterCards('all')">Todos</button>
+            <button class="filter-btn" onclick="filterCards('energia')">Energía</button>
+            <button class="filter-btn" onclick="filterCards('tropical')">Tropical</button>
+            <button class="filter-btn" onclick="filterCards('detox')">Detox</button>
+        </div>
+    </div>
+
+    <div class="cards-grid">
+        <!-- Card 1 -->
+        <article class="card" data-category="energia">
+            <div class="card-image-box">
+                <img src="12.jfif" alt="Jugo Verde Energía" class="card-img">
+                <span class="card-tag">Energía</span>
+            </div>
+            <div class="card-body">
+                <h3>Jugo Verde Energía</h3>
+                <p>Espinaca, piña y chía para potenciar tu rendimiento diario.</p>
+                <button onclick="openRecipe('energia')" class="btn-recipe">Ver Receta Completa &rarr;</button>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" data-category="tropical">
+            <div class="card-image-box">
+                <img src="6.jfif" alt="Tropical Fresh" class="card-img">
+                <span class="card-tag">Tropical</span>
+            </div>
+            <div class="card-body">
+                <h3>Tropical Fresh Arequipeño</h3>
+                <p>Papaya arequipeña, naranja y frutos locales frescos.</p>
+                <button onclick="openRecipe('tropical')" class="btn-recipe">Ver Receta Completa &rarr;</button>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" data-category="detox">
+            <div class="card-image-box">
+                <img src="pepinokion.jpg" alt="Detox Natural" class="card-img" style="object-position: center top;">
+                <span class="card-tag">Natural</span>
+            </div>
+            <div class="card-body">
+                <h3>Detox Natural & Refrescante</h3>
+                <p>Pepino, limón y kion para rehidratar y purificar tu organismo.</p>
+                <button onclick="openRecipe('detox')" class="btn-recipe">Ver Receta Completa &rarr;</button>
+            </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card" data-category="energia">
+            <div class="card-image-box">
+                <img src="9.jfif" alt="Mix Personalizado" class="card-img">
+                <span class="card-tag">Personalizado</span>
+            </div>
+            <div class="card-body">
+                <h3>Mix Personalizado</h3>
+                <p>Aprende las proporciones ideales para crear tus propias fórmulas.</p>
+                <button onclick="openRecipe('personalizado')" class="btn-recipe">Ver Receta Completa &rarr;</button>
+            </div>
+        </article>
+    </div>
+</section>
+
+    <!-- ==========================================
+         SECCIÓN BENEFICIOS
+         ========================================== -->
+    <section id="galeria" class="gallery-section">
+        <div class="section-header">
+            <h2>¿Cuáles son los beneficios?</h2>
+            <p>Descubre todo lo bueno que aporta integrar estos jugos a tu día a día.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <div class="gallery-img-box">
+                    <img src="7.jfif" alt="Ingredientes naturales" class="gallery-img">
+                </div>
+                <figcaption>
+                    <h3>Ingredientes 100% Naturales</h3>
+                    <p>Aprovecha los nutrientes directos de la fruta y verdura sin químicos ni conservantes artificiales.</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <div class="gallery-img-box">
+                    <img src="15.jfif" alt="Opciones variadas" class="gallery-img">
+                </div>
+                <figcaption>
+                    <h3>Variedad de Sabores</h3>
+                    <p>Múltiples combinaciones para experimentar nuevos sabores todos los días de la semana.</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <div class="gallery-img-box">
+                    <img src="16.jfif" alt="Preparación práctica" class="gallery-img">
+                </div>
+                <figcaption>
+                    <h3>Preparación Práctica</h3>
+                    <p>Una alternativa rápida y fácil de preparar en casa antes de salir a estudiar o trabajar.</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <div class="gallery-img-box">
+                    <img src="10.jfif" alt="Personalización de bebidas" class="gallery-img">
+                </div>
+                <figcaption>
+                    <h3>Total Personalización</h3>
+                    <p>Adapta cada preparación según tus requerimientos nutricionales y preferencias.</p>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN DE SUGERENCIAS / CONTACTO
+         ========================================== -->
+    <section id="contacto" class="cta-landing">
+        <div class="cta-container">
+            <h2>¿Tienes sugerencias de recetas saludables?</h2>
+            <p>Forma parte de esta iniciativa enviando tus combinaciones favoritas :)</p>
+            <form class="cta-form" onsubmit="event.preventDefault(); alert('¡Gracias por enviar tu propuesta!');">
+                <input type="text" placeholder="Tu nombre o emprendimiento" required aria-label="Nombre o Emprendimiento">
+                <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo electrónico">
+                <button type="submit" class="btn btn-primary">Mandar Receta</button>
+            </form>
+        </div>
+    </section>
+
+   <!-- ==========================================
+     PIE DE PÁGINA (FOOTER)
+     ========================================== -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>JugosVerdes<strong>AQP</strong></h3>
+            <p>Pequeñas elecciones, grandes experiencias para tu bienestar.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proposito">Nuestra Razón</a></li>
+                <li><a href="#emprendimientos">Bebidas propuestas</a></li>
+                <li><a href="#galeria">Beneficios</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MARCA PERSONAL SUTIL EN EL FOOTER -->
+    <div class="footer-creator-container">
+        <div class="creator-badge">
+            <img src="Dorrian.png" alt="Dorian Patrick - Creador" class="creator-avatar">
+            <div class="creator-info">
+                <span class="creator-title">Proyecto impulsado por</span>
+                <strong>Dorian Patrick Manrique Rodriguez</strong>
+                <p class="creator-sub">Promoviendo el cuidado de la salud y la naturaleza 🌱</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 JugosVerdes AQP. Todos los derechos reservados para Dorian Patrick Manrique Rodriguez 5toC.</p>
+    </div>
+</footer>
+<!-- MODAL EMERGENTE PARA RECETAS -->
+<div id="recipe-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <span id="modal-tag" class="card-tag">Categoría</span>
+            <h2 id="modal-title">Título de la Bebida</h2>
+        </div>
+        <div class="modal-body">
+            <img id="modal-img" src="" alt="Jugo" class="modal-img">
+            <div class="modal-info">
+                <h3>📋 Ingredientes:</h3>
+                <ul id="modal-ingredients"></ul>
+                
+                <h3>🥣 Preparación Paso a Paso:</h3>
+                <ol id="modal-steps"></ol>
+
+                <div class="modal-tip">
+                    💡 <strong>Consejo Saludable:</strong> Consumir preferentemente recién preparado para conservar todas sus vitaminas.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JAVASCRIPT PARA INTERACTIVIDAD -->
+<script>
+    // DATOS DE LAS RECETAS
+    const recipes = {
+        'energia': {
+            title: 'Jugo Verde Energía',
+            category: 'Energía',
+            img: '12.jfif',
+            ingredients: ['1 taza de espinaca fresca', '1/2 taza de piña picada', '1/2 manzana verde', '1 vaso de agua de coco o agua pura', '1 cucharadita de semillas de chía'],
+            steps: ['Lava bien todos los ingredientes.', 'Pica la manzana y la piña en cubos pequeños.', 'Agrega la espinaca, las frutas y el agua a la licuadora.', 'Licúa a velocidad alta durante 1 minuto hasta obtener una mezcla homogénea.', 'Sirve al instante y espolvorea la chía por encima.']
+        },
+        'tropical': {
+            title: 'Tropical Fresh Arequipeño',
+            category: 'Tropical',
+            img: '6.jfif',
+            ingredients: ['1/2 papaya arequipeña o papaya dulce', '1/2 vaso de jugo de naranja natural', '1/2 aguaymanto o tumbo', 'Unas gotas de limón', 'Hielo al gusto'],
+            steps: ['Pelar la papaya y retirar las semillas.', 'Extraer el jugo fresco de las naranjas.', 'Colocar las frutas en la licuadora con el jugo de naranja.', 'Procesar hasta integrar todo completamente.', 'Servir bien frío con hielo.']
+        },
+        'detox': {
+            title: 'Detox Natural & Refrescante',
+            category: 'Natural',
+            img: 'ICO 1.jfif',
+            ingredients: ['1/2 pepino con cáscara', 'El jugo de 1 limón', '1 rodaja fina de kion (jengibre)', '1 ramita de menta o hierbabuena', '1 vaso de agua fía'],
+            steps: ['Lavar el pepino y cortarlo en rodajas sin pelar.', 'Colocar el pepino, el kion, el agua y el jugo de limón en la licuadora.', 'Licuar por 45 segundos y colar si prefieres una textura más ligera.', 'Servir decorando con hojas de menta fresca.']
+        },
+        'personalizado': {
+            title: 'Mix Saludable a la Medida',
+            category: 'Personalizado',
+            img: '9.jfif',
+            ingredients: ['Base verde: Espinaca, acelga o pepino', 'Base frutal: Piña, manzana verde o plátano', 'Líquido: Agua, agua de coco o té verde frío', 'Potenciador: Maca, linaza o chía'],
+            steps: ['Selecciona una opción de cada categoría de la lista.', 'Lava y trocea todos los insumos.', 'Licúa primero las hojas con el líquido y luego agrega la fruta.', 'Sirve y disfruta de tu propia creación nutricional.']
+        }
+    };
+
+    // FUNCIONALIDAD DEL MODAL
+    const modal = document.getElementById('recipe-modal');
+    const closeModal = document.querySelector('.close-modal');
+
+    function openRecipe(key) {
+        const data = recipes[key];
+        if (!data) return;
+
+        document.getElementById('modal-title').innerText = data.title;
+        document.getElementById('modal-tag').innerText = data.category;
+        document.getElementById('modal-img').src = data.img;
+
+        const ingList = document.getElementById('modal-ingredients');
+        ingList.innerHTML = data.ingredients.map(ing => `<li>• ${ing}</li>`).join('');
+
+        const stepList = document.getElementById('modal-steps');
+        stepList.innerHTML = data.steps.map(step => `<li>${step}</li>`).join('');
+
+        modal.style.display = 'flex';
+    }
+
+    closeModal.onclick = () => modal.style.display = 'none';
+    window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+
+    // FILTROS DE TARJETAS
+    function filterCards(category) {
+        const cards = document.querySelectorAll('.card');
+        const buttons = document.querySelectorAll('.filter-btn');
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        cards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
