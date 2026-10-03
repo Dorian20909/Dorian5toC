@@ -28,20 +28,20 @@
         </nav>
     </header>
 
-<!-- ==========================================
-     SECCIÓN HERO (FULLSCREEN BACKGROUND)
-     ========================================== -->
+    <!-- ==========================================
+         SECCIÓN HERO (FULLSCREEN BACKGROUND)
+         ========================================== -->
     <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <span class="badge-tag">🌿 Promoviendo el consumo saludable</span>
-        <h1>Alimentación continua con más frutas y verduras</h1>
-        <p>Observa nuestras propuestas de jugos totalmente frutales y 100% saludables que puedes preparar hoy mismo en tu hogar.</p>
-        <div class="hero-buttons">
-            <a href="#emprendimientos" class="btn btn-primary">Explorar Recetas</a>
-            <a href="#contacto" class="btn btn-secondary">Enviar Sugerencia</a>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge-tag">🌿 Promoviendo el consumo saludable</span>
+            <h1>Alimentación continua con más frutas y verduras</h1>
+            <p>Observa nuestras propuestas de jugos totalmente frutales y 100% saludables que puedes preparar hoy mismo en tu hogar.</p>
+            <div class="hero-buttons">
+                <a href="#emprendimientos" class="btn btn-primary">Explorar Recetas</a>
+                <a href="#contacto" class="btn btn-secondary">Enviar Sugerencia</a>
+            </div>
         </div>
-    </div>
     </section>
 
     <!-- ==========================================
@@ -81,73 +81,73 @@
          SECCIÓN DE BEBIDAS PROPUESTAS
          ========================================== -->
     <section id="emprendimientos" class="cards-section">
-    <div class="section-header">
-        <h2>Bebidas Propuestas</h2>
-        <p><em>"Jugos saludables para una vida activa y llena de energía"</em></p>
+        <div class="section-header">
+            <h2>Bebidas Propuestas</h2>
+            <p><em>"Jugos saludables para una vida activa y llena de energía"</em></p>
 
-        <!-- BOTONES DE FILTRO -->
-        <div class="filter-container">
-            <button class="filter-btn active" onclick="filterCards('all')">Todos</button>
-            <button class="filter-btn" onclick="filterCards('energia')">Energía</button>
-            <button class="filter-btn" onclick="filterCards('tropical')">Tropical</button>
-            <button class="filter-btn" onclick="filterCards('detox')">Detox</button>
+            <!-- BOTONES DE FILTRO (Pasan el evento para compatibilidad) -->
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="filterCards('all', event)">Todos</button>
+                <button class="filter-btn" onclick="filterCards('energia', event)">Energía</button>
+                <button class="filter-btn" onclick="filterCards('tropical', event)">Tropical</button>
+                <button class="filter-btn" onclick="filterCards('detox', event)">Detox</button>
+            </div>
         </div>
-    </div>
 
-    <div class="cards-grid">
-        <!-- Card 1 -->
-        <article class="card" data-category="energia">
-            <div class="card-image-box">
-                <img src="12.jfif" alt="Jugo Verde Energía" class="card-img">
-                <span class="card-tag">Energía</span>
-            </div>
-            <div class="card-body">
-                <h3>Jugo Verde Energía</h3>
-                <p>Espinaca, piña y chía para potenciar tu rendimiento diario.</p>
-                <button onclick="openRecipe('energia')" class="btn-recipe">Ver Receta Completa &rarr;</button>
-            </div>
-        </article>
+        <div class="cards-grid">
+            <!-- Card 1 -->
+            <article class="card" data-category="energia">
+                <div class="card-image-box">
+                    <img src="12.jfif" alt="Jugo Verde Energía" class="card-img">
+                    <span class="card-tag">Energía</span>
+                </div>
+                <div class="card-body">
+                    <h3>Jugo Verde Energía</h3>
+                    <p>Espinaca, piña y chía para potenciar tu rendimiento diario.</p>
+                    <button onclick="openRecipe('energia')" class="btn-recipe">Ver Receta Completa &rarr;</button>
+                </div>
+            </article>
 
-        <!-- Card 2 -->
-        <article class="card" data-category="tropical">
-            <div class="card-image-box">
-                <img src="6.jfif" alt="Tropical Fresh" class="card-img">
-                <span class="card-tag">Tropical</span>
-            </div>
-            <div class="card-body">
-                <h3>Tropical Fresh Arequipeño</h3>
-                <p>Papaya arequipeña, naranja y frutos locales frescos.</p>
-                <button onclick="openRecipe('tropical')" class="btn-recipe">Ver Receta Completa &rarr;</button>
-            </div>
-        </article>
+            <!-- Card 2 -->
+            <article class="card" data-category="tropical">
+                <div class="card-image-box">
+                    <img src="6.jfif" alt="Tropical Fresh" class="card-img">
+                    <span class="card-tag">Tropical</span>
+                </div>
+                <div class="card-body">
+                    <h3>Tropical Fresh Arequipeño</h3>
+                    <p>Papaya arequipeña, naranja y frutos locales frescos.</p>
+                    <button onclick="openRecipe('tropical')" class="btn-recipe">Ver Receta Completa &rarr;</button>
+                </div>
+            </article>
 
-        <!-- Card 3 -->
-        <article class="card" data-category="detox">
-            <div class="card-image-box">
-                <img src="pepinokion.jpg" alt="Detox Natural" class="card-img" style="object-position: center top;">
-                <span class="card-tag">Natural</span>
-            </div>
-            <div class="card-body">
-                <h3>Detox Natural & Refrescante</h3>
-                <p>Pepino, limón y kion para rehidratar y purificar tu organismo.</p>
-                <button onclick="openRecipe('detox')" class="btn-recipe">Ver Receta Completa &rarr;</button>
-            </div>
-        </article>
+            <!-- Card 3 -->
+            <article class="card" data-category="detox">
+                <div class="card-image-box">
+                    <img src="pepinokion.jpg" alt="Detox Natural" class="card-img" style="object-position: center top;">
+                    <span class="card-tag">Natural</span>
+                </div>
+                <div class="card-body">
+                    <h3>Detox Natural & Refrescante</h3>
+                    <p>Pepino, limón y kion para rehidratar y purificar tu organismo.</p>
+                    <button onclick="openRecipe('detox')" class="btn-recipe">Ver Receta Completa &rarr;</button>
+                </div>
+            </article>
 
-        <!-- Card 4 -->
-        <article class="card" data-category="energia">
-            <div class="card-image-box">
-                <img src="9.jfif" alt="Mix Personalizado" class="card-img">
-                <span class="card-tag">Personalizado</span>
-            </div>
-            <div class="card-body">
-                <h3>Mix Personalizado</h3>
-                <p>Aprende las proporciones ideales para crear tus propias fórmulas.</p>
-                <button onclick="openRecipe('personalizado')" class="btn-recipe">Ver Receta Completa &rarr;</button>
-            </div>
-        </article>
-    </div>
-</section>
+            <!-- Card 4 -->
+            <article class="card" data-category="energia">
+                <div class="card-image-box">
+                    <img src="9.jfif" alt="Mix Personalizado" class="card-img">
+                    <span class="card-tag">Personalizado</span>
+                </div>
+                <div class="card-body">
+                    <h3>Mix Personalizado</h3>
+                    <p>Aprende las proporciones ideales para crear tus propias fórmulas.</p>
+                    <button onclick="openRecipe('personalizado')" class="btn-recipe">Ver Receta Completa &rarr;</button>
+                </div>
+            </article>
+        </div>
+    </section>
 
     <!-- ==========================================
          SECCIÓN BENEFICIOS
@@ -216,142 +216,145 @@
         </div>
     </section>
 
-   <!-- ==========================================
-     PIE DE PÁGINA (FOOTER)
-     ========================================== -->
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-col">
-            <h3>JugosVerdes<strong>AQP</strong></h3>
-            <p>Pequeñas elecciones, grandes experiencias para tu bienestar.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Enlaces Rápidos</h4>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#proposito">Nuestra Razón</a></li>
-                <li><a href="#emprendimientos">Bebidas propuestas</a></li>
-                <li><a href="#galeria">Beneficios</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- MARCA PERSONAL SUTIL EN EL FOOTER -->
-    <div class="footer-creator-container">
-        <div class="creator-badge">
-            <img src="Dorrian.png" alt="Dorian Patrick - Creador" class="creator-avatar">
-            <div class="creator-info">
-                <span class="creator-title">Proyecto impulsado por</span>
-                <strong>Dorian Patrick Manrique Rodriguez</strong>
-                <p class="creator-sub">Promoviendo el cuidado de la salud y la naturaleza 🌱</p>
+    <!-- ==========================================
+         PIE DE PÁGINA (FOOTER)
+         ========================================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>JugosVerdes<strong>AQP</strong></h3>
+                <p>Pequeñas elecciones, grandes experiencias para tu bienestar.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#proposito">Nuestra Razón</a></li>
+                    <li><a href="#emprendimientos">Bebidas propuestas</a></li>
+                    <li><a href="#galeria">Beneficios</a></li>
+                </ul>
             </div>
         </div>
-    </div>
 
-    <div class="footer-bottom">
-        <p>&copy; 2026 JugosVerdes AQP. Todos los derechos reservados para Dorian Patrick Manrique Rodriguez 5toC.</p>
-    </div>
-</footer>
-<!-- MODAL EMERGENTE PARA RECETAS -->
-<div id="recipe-modal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <div class="modal-header">
-            <span id="modal-tag" class="card-tag">Categoría</span>
-            <h2 id="modal-title">Título de la Bebida</h2>
+        <!-- MARCA PERSONAL SUTIL EN EL FOOTER -->
+        <div class="footer-creator-container">
+            <div class="creator-badge">
+                <img src="Dorrian.png" alt="Dorian Patrick - Creador" class="creator-avatar">
+                <div class="creator-info">
+                    <span class="creator-title">Proyecto impulsado por</span>
+                    <strong>Dorian Patrick Manrique Rodriguez</strong>
+                    <p class="creator-sub">Promoviendo el cuidado de la salud y la naturaleza 🌱</p>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <img id="modal-img" src="" alt="Jugo" class="modal-img">
-            <div class="modal-info">
-                <h3>📋 Ingredientes:</h3>
-                <ul id="modal-ingredients"></ul>
-                
-                <h3>🥣 Preparación Paso a Paso:</h3>
-                <ol id="modal-steps"></ol>
 
-                <div class="modal-tip">
-                    💡 <strong>Consejo Saludable:</strong> Consumir preferentemente recién preparado para conservar todas sus vitaminas.
+        <div class="footer-bottom">
+            <p>&copy; 2026 JugosVerdes AQP. Todos los derechos reservados para Dorian Patrick Manrique Rodriguez 5toC.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL EMERGENTE PARA RECETAS -->
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <span id="modal-tag" class="card-tag">Categoría</span>
+                <h2 id="modal-title">Título de la Bebida</h2>
+            </div>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Jugo" class="modal-img">
+                <div class="modal-info">
+                    <h3>📋 Ingredientes:</h3>
+                    <ul id="modal-ingredients"></ul>
+                    
+                    <h3>🥣 Preparación Paso a Paso:</h3>
+                    <ol id="modal-steps"></ol>
+
+                    <div class="modal-tip">
+                        💡 <strong>Consejo Saludable:</strong> Consumir preferentemente recién preparado para conservar todas sus vitaminas.
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- JAVASCRIPT PARA INTERACTIVIDAD -->
-<script>
-    // DATOS DE LAS RECETAS
-    const recipes = {
-        'energia': {
-            title: 'Jugo Verde Energía',
-            category: 'Energía',
-            img: '12.jfif',
-            ingredients: ['1 taza de espinaca fresca', '1/2 taza de piña picada', '1/2 manzana verde', '1 vaso de agua de coco o agua pura', '1 cucharadita de semillas de chía'],
-            steps: ['Lava bien todos los ingredientes.', 'Pica la manzana y la piña en cubos pequeños.', 'Agrega la espinaca, las frutas y el agua a la licuadora.', 'Licúa a velocidad alta durante 1 minuto hasta obtener una mezcla homogénea.', 'Sirve al instante y espolvorea la chía por encima.']
-        },
-        'tropical': {
-            title: 'Tropical Fresh Arequipeño',
-            category: 'Tropical',
-            img: '6.jfif',
-            ingredients: ['1/2 papaya arequipeña o papaya dulce', '1/2 vaso de jugo de naranja natural', '1/2 aguaymanto o tumbo', 'Unas gotas de limón', 'Hielo al gusto'],
-            steps: ['Pelar la papaya y retirar las semillas.', 'Extraer el jugo fresco de las naranjas.', 'Colocar las frutas en la licuadora con el jugo de naranja.', 'Procesar hasta integrar todo completamente.', 'Servir bien frío con hielo.']
-        },
-        'detox': {
-            title: 'Detox Natural & Refrescante',
-            category: 'Natural',
-            img: 'ICO 1.jfif',
-            ingredients: ['1/2 pepino con cáscara', 'El jugo de 1 limón', '1 rodaja fina de kion (jengibre)', '1 ramita de menta o hierbabuena', '1 vaso de agua fía'],
-            steps: ['Lavar el pepino y cortarlo en rodajas sin pelar.', 'Colocar el pepino, el kion, el agua y el jugo de limón en la licuadora.', 'Licuar por 45 segundos y colar si prefieres una textura más ligera.', 'Servir decorando con hojas de menta fresca.']
-        },
-        'personalizado': {
-            title: 'Mix Saludable a la Medida',
-            category: 'Personalizado',
-            img: '9.jfif',
-            ingredients: ['Base verde: Espinaca, acelga o pepino', 'Base frutal: Piña, manzana verde o plátano', 'Líquido: Agua, agua de coco o té verde frío', 'Potenciador: Maca, linaza o chía'],
-            steps: ['Selecciona una opción de cada categoría de la lista.', 'Lava y trocea todos los insumos.', 'Licúa primero las hojas con el líquido y luego agrega la fruta.', 'Sirve y disfruta de tu propia creación nutricional.']
-        }
-    };
-
-    // FUNCIONALIDAD DEL MODAL
-    const modal = document.getElementById('recipe-modal');
-    const closeModal = document.querySelector('.close-modal');
-
-    function openRecipe(key) {
-        const data = recipes[key];
-        if (!data) return;
-
-        document.getElementById('modal-title').innerText = data.title;
-        document.getElementById('modal-tag').innerText = data.category;
-        document.getElementById('modal-img').src = data.img;
-
-        const ingList = document.getElementById('modal-ingredients');
-        ingList.innerHTML = data.ingredients.map(ing => `<li>• ${ing}</li>`).join('');
-
-        const stepList = document.getElementById('modal-steps');
-        stepList.innerHTML = data.steps.map(step => `<li>${step}</li>`).join('');
-
-        modal.style.display = 'flex';
-    }
-
-    closeModal.onclick = () => modal.style.display = 'none';
-    window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
-
-    // FILTROS DE TARJETAS
-    function filterCards(category) {
-        const cards = document.querySelectorAll('.card');
-        const buttons = document.querySelectorAll('.filter-btn');
-
-        buttons.forEach(btn => btn.classList.remove('active'));
-        event.target.classList.add('active');
-
-        cards.forEach(card => {
-            if (category === 'all' || card.getAttribute('data-category') === category) {
-                card.style.display = 'flex';
-            } else {
-                card.style.display = 'none';
+    <!-- JAVASCRIPT PARA INTERACTIVIDAD -->
+    <script>
+        // DATOS DE LAS RECETAS
+        const recipes = {
+            'energia': {
+                title: 'Jugo Verde Energía',
+                category: 'Energía',
+                img: '12.jfif',
+                ingredients: ['1 taza de espinaca fresca', '1/2 taza de piña picada', '1/2 manzana verde', '1 vaso de agua de coco o agua pura', '1 cucharadita de semillas de chía'],
+                steps: ['Lava bien todos los ingredientes.', 'Pica la manzana y la piña en cubos pequeños.', 'Agrega la espinaca, las frutas y el agua a la licuadora.', 'Licúa a velocidad alta durante 1 minuto hasta obtener una mezcla homogénea.', 'Sirve al instante y espolvorea la chía por encima.']
+            },
+            'tropical': {
+                title: 'Tropical Fresh Arequipeño',
+                category: 'Tropical',
+                img: '6.jfif',
+                ingredients: ['1/2 papaya arequipeña o papaya dulce', '1/2 vaso de jugo de naranja natural', '1/2 aguaymanto o tumbo', 'Unas gotas de limón', 'Hielo al gusto'],
+                steps: ['Pelar la papaya y retirar las semillas.', 'Extraer el jugo fresco de las naranjas.', 'Colocar las frutas en la licuadora con el jugo de naranja.', 'Procesar hasta integrar todo completamente.', 'Servir bien frío con hielo.']
+            },
+            'detox': {
+                title: 'Detox Natural & Refrescante',
+                category: 'Natural',
+                img: 'ICO_1.jfif', // Corregido: sin espacios para evitar fallos en GitHub Pages
+                ingredients: ['1/2 pepino con cáscara', 'El jugo de 1 limón', '1 rodaja fina de kion (jengibre)', '1 ramita de menta o hierbabuena', '1 vaso de agua fría'],
+                steps: ['Lavar el pepino y cortarlo en rodajas sin pelar.', 'Colocar el pepino, el kion, el agua y el jugo de limón en la licuadora.', 'Licuar por 45 segundos y colar si prefieres una textura más ligera.', 'Servir decorando con hojas de menta fresca.']
+            },
+            'personalizado': {
+                title: 'Mix Saludable a la Medida',
+                category: 'Personalizado',
+                img: '9.jfif',
+                ingredients: ['Base verde: Espinaca, acelga o pepino', 'Base frutal: Piña, manzana verde o plátano', 'Líquido: Agua, agua de coco o té verde frío', 'Potenciador: Maca, linaza o chía'],
+                steps: ['Selecciona una opción de cada categoría de la lista.', 'Lava y trocea todos los insumos.', 'Licúa primero las hojas con el líquido y luego agrega la fruta.', 'Sirve y disfruta de tu propia creación nutricional.']
             }
-        });
-    }
-</script>
+        };
+
+        // FUNCIONALIDAD DEL MODAL
+        const modal = document.getElementById('recipe-modal');
+        const closeModal = document.querySelector('.close-modal');
+
+        function openRecipe(key) {
+            const data = recipes[key];
+            if (!data) return;
+
+            document.getElementById('modal-title').innerText = data.title;
+            document.getElementById('modal-tag').innerText = data.category;
+            document.getElementById('modal-img').src = data.img;
+
+            const ingList = document.getElementById('modal-ingredients');
+            ingList.innerHTML = data.ingredients.map(ing => `<li>• ${ing}</li>`).join('');
+
+            const stepList = document.getElementById('modal-steps');
+            stepList.innerHTML = data.steps.map(step => `<li>${step}</li>`).join('');
+
+            modal.style.display = 'flex';
+        }
+
+        closeModal.onclick = () => modal.style.display = 'none';
+        window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+
+        // FILTROS DE TARJETAS
+        function filterCards(category, evt) {
+            const cards = document.querySelectorAll('.card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if (evt && evt.target) {
+                evt.target.classList.add('active');
+            }
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
